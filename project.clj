@@ -5,6 +5,7 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [compojure "1.5.1"]
                  [ring/ring-defaults "0.2.1"]
+                 [org.clojure/java.jdbc "0.7.3"]
                  [org.postgresql/postgresql "42.1.4"]
                  [clojure.jdbc/clojure.jdbc-c3p0 "0.3.3"]]
   :plugins [[lein-ring "0.9.7"]]
