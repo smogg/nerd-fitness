@@ -4,9 +4,14 @@
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [compojure "1.5.1"]
-                 [ring/ring-defaults "0.2.1"]]
+                 [ring/ring-defaults "0.2.1"]
+                 [org.postgresql/postgresql "42.1.4"]
+                 [clojure.jdbc/clojure.jdbc-c3p0 "0.3.3"]]
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler nerd-recipes.handler/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring/ring-mock "0.3.0"]]}})
+                        [ring/ring-mock "0.3.0"]]
+         :plugins [[lein-postgres "0.1.1"]]
+         :postgres {:port 5432
+                    :data-directory "/tmp/nerd-recipes-embed-postgres"}}})
