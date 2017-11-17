@@ -8,8 +8,8 @@
                  [org.clojure/java.jdbc "0.7.3"]
                  [org.postgresql/postgresql "42.1.4"]
                  [clojure.jdbc/clojure.jdbc-c3p0 "0.3.3"]
-                 [com.layerware/hugsql "0.4.8"]]
-
+                 [com.layerware/hugsql "0.4.8"]
+                 [drift "1.5.2"]]
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler nerd-recipes.handler/app}
   :profiles
