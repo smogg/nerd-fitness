@@ -15,6 +15,4 @@
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring/ring-mock "0.3.0"]]
-         :plugins [[lein-postgres "0.1.1"]]
-         :postgres {:port 5432
-                    :data-directory "/tmp/nerd-recipes-embed-postgres"}}})
+         :plugins [[lein-auto "0.1.3"]]}})
