@@ -15,4 +15,5 @@
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring/ring-mock "0.3.0"]]
-         :plugins [[lein-auto "0.1.3"]]}})
+         :plugins [[lein-auto "0.1.3"]
+                   [lein-cljfmt "0.5.7"]]}})
