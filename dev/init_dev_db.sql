@@ -1,0 +1,3 @@
+CREATE USER admin;
+CREATE DATABASE nerd_recipes;
+GRANT ALL PRIVILEGES ON DATABASE nerd_recipes TO admin;
