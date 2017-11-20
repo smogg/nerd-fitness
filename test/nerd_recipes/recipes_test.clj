@@ -1,7 +1,7 @@
 (ns nerd-recipes.recipes-test
- (:require [clojure.test :refer :all]
-           [nerd-recipes.test-utils :as tu]
-           [nerd-recipes.recipes :as recipes]))
+  (:require [clojure.test :refer :all]
+            [nerd-recipes.test-utils :as tu]
+            [nerd-recipes.recipes :as recipes]))
 
 (use-fixtures :once tu/test-db-fixture)
 
