@@ -13,5 +13,8 @@ DROP TABLE IF EXISTS recipes
 INSERT INTO recipes (name, description)
 VALUES (:name, :description)
 
--- :name recipe-by-name-like :? :*
+-- :name recipe-by-name-like :? :1
 SELECT * FROM recipes WHERE name LIKE :name-like
+
+-- :name recipes-with-cols :? :*
+SELECT :i*:cols FROM recipes
