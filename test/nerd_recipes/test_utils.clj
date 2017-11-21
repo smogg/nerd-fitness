@@ -1,6 +1,7 @@
 (ns nerd-recipes.test-utils
   (:require [nerd-recipes.db :as db]
-            [migrations.001-create-tables :as create-tables]))
+            [drift.core :as drift]
+            [drift.runner :as runner]))
 
 (def test-db-spec
   {:subprotocol "postgresql"
@@ -11,8 +12,9 @@
 (defn test-db-fixture
   [tests]
   (with-redefs [nerd-recipes.db/spec test-db-spec]
-    (create-tables/up)
+    (drift/run-init nil)
+    (runner/migrate-up-all)
     (try
       (tests)
       (finally
-        (create-tables/down)))))
+        (runner/migrate-down-all)))))
